@@ -1,0 +1,92 @@
+.navbar-collapse {
+	padding-right: 0;
+	padding-left: 0;
+	font-size: 22px;
+	text-transform: uppercase;
+
+	.navbar-nav {
+		margin: 0 -15px;
+
+		> li {
+			position: static;
+
+			> a {
+				color: blue;
+
+				&:hover,
+				&:focus {
+					color: green;
+					text-decoration: underline;
+					background-color: transparent;
+				}
+
+				.glyphicon {
+					top: 45px;
+					right: 40%;
+					position: absolute;
+					display: none;
+				}
+			}
+		}
+		> li.open {
+
+			> a {
+
+				.glyphicon {
+					display: block;
+				}
+			}
+		}
+		.active > a {
+			color: red;
+
+			&:hover,
+			&:focus {
+				color: red;
+
+			}
+		}
+		ul.dropdown-menu {
+			top: 65px;
+			padding: 0;
+			width: 100%;
+			border: none;
+			box-shadow: none;
+			border-radius: 0;
+			text-align: right;
+			background-color: #ccc;
+			border-bottom: 20px solid $color-white;
+
+			li {
+				display: inline-block;
+
+				a {
+					padding: 11px 20px;
+					font-size: 22px;
+				}
+			}
+		}
+	}
+	.nav .open > a {
+		background-color: transparent;
+
+		&:hover,
+		&:focus {
+			background-color: transparent;
+		}
+	}
+}
+
+.navbar-toggle {
+	margin-right: 0;
+	border-radius: 0;
+	border: solid 1px purple;
+
+	.icon-bar {
+		background-color: purple;
+	}
+}
+
+.navbar-brand {
+	padding-left: 0;
+}
