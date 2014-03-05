@@ -220,16 +220,6 @@ module.exports = function (grunt) {
             }
         },
 
-        // Reads HTML for usemin blocks to enable smart builds that automatically
-        // concat, minify and revision files. Creates configurations in memory so
-        // additional tasks can operate on them
-        //useminPrepare: {
-        //    options: {
-        //        dest: '<%= livinggroup.wwwroot %>'
-        //    },
-        //    html: '<%= livinggroup.assets %>/index.html'
-        //},
-
         // Performs rewrites based on rev and the useminPrepare configuration
         usemin: {
             options: {
@@ -335,33 +325,6 @@ module.exports = function (grunt) {
             }
         },
 
-
-        // By default, your `index.html`'s <!-- Usemin block --> will take care of
-        // minification. These next options are pre-configured if you do not wish
-        // to use the Usemin blocks.
-        // cssmin: {
-        //     wwwroot: {
-        //         files: {
-        //             '<%= livinggroup.wwwroot %>/styles/main.css': [
-        //                 '.tmp/styles/{,*/}*.css',
-        //                 '<%= livinggroup.app %>/styles/{,*/}*.css'
-        //             ]
-        //         }
-        //     }
-        // },
-        // uglify: {
-        //     wwwroot: {
-        //         files: {
-        //             '<%= livinggroup.wwwroot %>/scripts/scripts.js': [
-        //                 '<%= livinggroup.wwwroot %>/scripts/scripts.js'
-        //             ]
-        //         }
-        //     }
-        // },
-        // concat: {
-        //     wwwroot: {}
-        // },
-
         // Copies remaining files to places other tasks can use
         copy: {
             wwwroot: {
@@ -458,7 +421,6 @@ module.exports = function (grunt) {
 
     grunt.registerTask('build', [
         'clean:wwwroot',
-        //'useminPrepare',
         'concurrent:wwwroot',
         'autoprefixer',
         'concat',
