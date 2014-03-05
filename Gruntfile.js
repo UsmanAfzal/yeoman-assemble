@@ -66,7 +66,7 @@ module.exports = function (grunt) {
                 files: ['<%= livinggroup.assets %>/templates/layouts/*.hbs',
                         '<%= livinggroup.assets %>/templates/pages/*.hbs',
                         '<%= livinggroup.assets %>/templates/partials/*.hbs'],
-                tasks: ['assemble:server']
+                tasks: ['assemble:server', 'autoprefixer']
             }
         },
 
