@@ -294,8 +294,7 @@ module.exports = function (grunt) {
                             'assets/bower_components/sass-bootstrap/js/tab.js' ] },
                       { dest: '.tmp/concat/scripts/main.js',
                         src:
-                            [ 'assets/scripts/main.js',
-                            'assets/scripts/masonry.min.js']
+                            [ 'assets/scripts/main.js' ]
                       }
                     ]
             }
